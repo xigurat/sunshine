@@ -130,6 +130,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'jquery',
+    'bootstrap',
+    'ajax_file_uploader',
+
+    'library',
+    'library_client',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -148,7 +154,7 @@ LOGGING = {
         }
     },
     'handlers': {
-        'mail_admins': {
+        'tic': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
