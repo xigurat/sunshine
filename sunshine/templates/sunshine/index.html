@@ -1,0 +1,25 @@
+{% extends 'sunshine/base.html' %}
+
+{% block head %}
+    <link href="{{ STATIC_URL }}sunshine/css/index.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block nav_search %}{% endblock %}
+
+{% block container %}
+
+<div class="hero-unit">
+    <h1>Sunshine</h1>
+    <p>Compartiendo el conocimiento que brilla,
+    <strong>+1.230</strong> libros y subiendo...</p>
+    <small>este sitio está en pruebas <em class="label label-warning">beta</em></small>
+    <div class="row">
+        <form class="index-search-form offset1" action="" method="post">
+            <input type="text" class="search-query span7" name="" value="" id="" />
+            <input class="btn btn-primary span2" type="submit" value="Buscar" />
+        </form>
+    </div>
+</div>
+
+{% endblock %}
