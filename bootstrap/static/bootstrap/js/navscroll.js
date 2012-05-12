@@ -18,8 +18,10 @@
         return $nav.removeClass('subnav-fixed');
       }
     };
-    processScroll();
-    return $win.on('scroll', processScroll);
+    if ($nav.length) {
+      processScroll();
+      return $win.on('scroll', processScroll);
+    }
   });
 
 }).call(this);
