@@ -1,0 +1,75 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block title %}{% block location %}{% endblock %}Sunshine{% endblock %}
+
+{% block brand %}Sunshine{% endblock %}
+
+
+{% block nav_lists %}
+
+<div class="nav-collapse">
+    <ul class="nav">
+        {% if user.is_authenticated %}
+            <li class="{% block nav_book_upload %}{% endblock %}">
+                <a href="{% url book_upload %}">Upload a book</a>
+            </li>
+        {% endif %}
+
+        <li class="">
+            <a href="#">About us</a>
+        </li>
+    </ul>
+
+    {% block nav_search %}
+    <form class="navbar-search pull-left" action="">
+        <input type="text" class="search-query span3" placeholder="Buscar">
+    </form>
+    {% endblock %}
+
+    <ul class="nav pull-right">
+        <li><a href="#">Report an error</a></li>
+        {% if user.is_authenticated %}
+            <li>
+                <a href="#">Admin</a>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-envelope icon-white"></i>
+                    <strong class="color-white">1</strong> <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon-"></i> fulano le recomienda leer El camino a casa</a></li>
+                    <li><a href="#"><i class="icon-"></i> verificación de duplicado</a></li>
+                    <li><a href="#"><i class="icon-"></i> Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-refresh"></i> Clear</a></li>
+                </ul>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="color-gray-lighter">{{ user.username }}</span> <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="icon-remove"></i> Remove User</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-repeat"></i> Cambiar de usuario</a></li>
+                    <li><a href="#"><i class="icon-off"></i> Log out</a></li>
+                </ul>
+            </li>
+            <li class="divider-vertical"></li>
+        {% else %}
+            <li><a href="#"><strong>Signup</strong></a></li>
+            <li><a href="#"><strong>Login</strong></a></li>
+        {% endif %}
+    </ul>
+</div>
+
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="{{ STATIC_URL }}sunshine/js/base.js"></script>
+    {% block subscript %}
+    {% endblock %}
+{% endblock %}
