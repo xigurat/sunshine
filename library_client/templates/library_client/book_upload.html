@@ -1,0 +1,11 @@
+{% extends 'sunshine/base.html' %}
+
+{% block nav_book_upload %}active{% endblock %}
+
+
+{% block subscript %}
+    {% include 'spine/head.html' %}
+    {% include 'ajax_file_uploader/head.html' %}
+    <script type="text/javascript" src="{{ STATIC_URL }}library/models.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}sunshine/book/upload.js"></script>
+{% endblock %}
