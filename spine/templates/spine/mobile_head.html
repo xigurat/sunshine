@@ -1,0 +1,19 @@
+{% extends 'spine/head.html' %}
+
+
+{% block css %}
+    <link href="{{ STATIC_URL }}spine_mobile/css/application.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block query_plugins %}
+    <script type="text/javascript" src="{{ STATIC_URL }}jquery/gfx.js"></script>
+{% endblock %}
+
+{% block spine_plugins %}
+    <script type="text/javascript" src="{{ STATIC_URL }}spine/manager.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}spine/route.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}spine_mobile/stage.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}spine_mobile/panel.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}spine_mobile/touch.js"></script>
+    <link rel="apple-touch-startup-image" href="{{ STATIC_URL }}spine_mobile/images/loading.png">
+{% endblock %}
