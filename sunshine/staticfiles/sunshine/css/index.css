@@ -1,0 +1,23 @@
+
+.index-search-form {
+    margin-top: 30px ;
+    margin-bottom: 30px;
+}
+
+.index-search-form .search-query {
+    font-size: 2.3em;
+    height: 35px;
+    border-radius: 14px 0 0 14px;
+}
+
+.index-search-form [type="submit"] {
+    margin-left: -5px;
+    font-size: 2em;
+    height: 44px;
+    border-radius: 0 14px 14px 0;
+}
+
+.typeahead a {
+    font-size: 2em;
+    line-height: 1em;
+}
