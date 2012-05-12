@@ -17,7 +17,6 @@ $ ->
             isFixed = false
             $nav.removeClass('subnav-fixed')
 
-
-    processScroll()
-
-    $win.on('scroll', processScroll)
+    if $nav.length
+        processScroll()
+        $win.on('scroll', processScroll)
