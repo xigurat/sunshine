@@ -1,0 +1,23 @@
+{% load i18n %}
+<div class="panel right">
+  <div class="white_zone">
+    <ul class="metadata">
+      <li><strong>Publicación:</strong> {{ book.date }}</li>
+      <li><strong>Páginas:</strong> {{ book.n_pages }}</li>
+      <li><strong>Tamaño:</strong> {{ book.file.size|filesizeformat }}</li>
+      <li><strong>Subido:</strong> {{ book.file.upload_date|date }}</li>
+      <li><strong>Descargas:</strong> 229</li>
+      <li><a style="text-decoration:underline" href="{{ book.short_url }}">{% trans 'Short url' %}</a></li>
+    </ul>
+  </div>
+  <div class="dashed"></div>
+  <div class="white_zone">
+    <h3>Categorías</h3>
+    <div class="categories">
+      <div class="category bg_color_1 fg_color_2">apps</div>
+      <div class="category bg_color_1 fg_color_2">html5</div>
+      <div class="category bg_color_1 fg_color_2">web</div>
+      <div class="category bg_color_1 fg_color_2">desarrollo</div>
+    </div>
+  </div>
+</div>

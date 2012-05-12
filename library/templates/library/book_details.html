@@ -1,0 +1,45 @@
+{% extends 'library/base.html' %}
+
+{% block title %}Sunshine | Book Details{% endblock %}
+
+{% block subhead %}
+    <script type="text/javascript">
+        $(function() {
+            book_details = new Library.BookDetails({el: $('#page'), item_id: {{ book.id }}});
+        })
+    </script>
+{% endblock %}
+
+{% block content %}
+    {% include 'scrolltop.html' %}
+    {% load i18n %}
+    <div class="panel left">
+      <div class="out_left_1 bg_color_1 fg_color_2">
+        <img class="preview left" src="{{ book.thumbnail_url }}" alt="" title="" />
+        <ul class="authors right">
+          <li>Alejandro Morgado</li>
+          <li>Eddy E. del Valle</li>
+        </ul>
+        <h2 class="title">{{ book.title }}</h2>
+      </div>
+      <div class="folded_border bg_color_fold"></div>
+      <div class="white_zone">
+        <h3>Resumen</h3>
+        <p>{{ book.summary }}</p>
+      </div>
+
+    </div>
+    <div class="panel right">
+      <div class="white_zone">
+        <ul class="metadata">
+          <li><strong>Publicación:</strong> {{ book.date }}</li>
+          <li><strong>Páginas:</strong> {{ book.n_pages }}</li>
+          <li><strong>Tamaño:</strong> {{ book.file.size|filesizeformat }}</li>
+          <li><strong>Subido:</strong> {{ book.file.upload_date|date }}</li>
+          <li><strong>Descargas:</strong> 229</li>
+          <li><a style="text-decoration:underline" href="{{ book.short_url }}">{% trans 'Short url' %}</a></li>
+        </ul>
+      </div>
+      <div class="dashed"></div>
+    </div>
+{% endblock %}
