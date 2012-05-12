@@ -1,0 +1,23 @@
+
+/*
+Grayscale colors
+*/
+.color-black { color: #000; }
+.color-gray-darker { color: #222; }
+.color-gray-dark { color: #333; }
+.color-gray { color: #555; }
+.color-gray-light { color: #999; }
+.color-gray-lighter { color: #eee; }
+.color-white{ color: #fff; }
+
+
+/*
+Accent colors
+*/
+color-blue { color: #049cdb; }
+color-green { color: #46a546; }
+color-re { color: #9d261d; }
+color-yellow { color: #ffc40d; }
+color-orange { color: #f89406; }
+color-pink { color: #c3325f; }
+color-purple { color: #7a43b6; }
