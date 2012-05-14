@@ -474,23 +474,6 @@ qq.FileUploaderBasic.prototype = {
  * Class that creates upload widget with drag-and-drop and file list
  * @inherits qq.FileUploaderBasic
  */
-
-var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-mytemplate =
-    '<div class="qq-uploader">' +
-    '<div class="upload-msg-area"><p class="msg">Drop the files here to upload</p></div>' +
-    '<div class="qq-upload-drop-area"><span>Drop the files here to upload</span></div>' +
-    '<div class="qq-upload-button">Upload a file</div>' +
-    '<ul class="qq-upload-list"></ul>' +
- '</div>';
-if (!is_chrome){
-    mytemplate =
-        '<div class="qq-uploader">' +
-        '<div class="qq-upload-button">Upload a file</div>' +
-        '<ul class="qq-upload-list"></ul>' +
-     '</div>';
-}
-
 qq.FileUploader = function(o){
     // call parent constructor
     qq.FileUploaderBasic.apply(this, arguments);
@@ -501,11 +484,11 @@ qq.FileUploader = function(o){
         // if set, will be used instead of qq-upload-list in template
         listElement: null,
 
-
-
-
-        template : mytemplate,
-
+        template: '<div class="qq-uploader">' +
+                '<div class="qq-upload-drop-area"><span>Drop files here to upload</span></div>' +
+                '<div class="qq-upload-button">Upload a file</div>' +
+                '<ul class="qq-upload-list"></ul>' +
+             '</div>',
 
         // template for one item in file list
         fileTemplate: '<li>' +
@@ -581,13 +564,13 @@ qq.extend(qq.FileUploader.prototype, {
                 qq.removeClass(dropArea, self._classes.dropActive);
             },
             onDrop: function(e){
-                dropArea.style.display = 'none';
+                //~ dropArea.style.display = 'none';
                 qq.removeClass(dropArea, self._classes.dropActive);
                 self._uploadFileList(e.dataTransfer.files);
             }
         });
 
-        dropArea.style.display = 'none';
+        //~ dropArea.style.display = 'none';
 
         qq.attach(document, 'dragenter', function(e){
             if (!dz._isValidFileDrag(e)) return;
@@ -600,7 +583,7 @@ qq.extend(qq.FileUploader.prototype, {
             var relatedTarget = document.elementFromPoint(e.clientX, e.clientY);
             // only fire when leaving document out
             if ( ! relatedTarget || relatedTarget.nodeName == "HTML"){
-                dropArea.style.display = 'none';
+                //~ dropArea.style.display = 'none';
             }
         });
     },
@@ -1215,11 +1198,10 @@ qq.extend(qq.UploadHandlerXhr.prototype, {
         var queryString = qq.obj2url(params, this._options.action);
 
         xhr.open("POST", queryString, true);
+        xhr.setRequestHeader('X-CSRFToken', $.getCookies()['csrftoken']);
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
         xhr.setRequestHeader("X-File-Name", encodeURIComponent(name));
         xhr.setRequestHeader("Content-Type", "application/octet-stream");
-        xhr.setRequestHeader("Content-Type", "application/octet-stream");
-        xhr.setRequestHeader("X_CSRFTOKEN", $.getCookies()["csrftoken"]);
         xhr.send(file);
     },
     _onComplete: function(id, xhr){
