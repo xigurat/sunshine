@@ -77,6 +77,7 @@ STATIC_ROOT = join(PROJECT_PATH, 'static/')
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     join(PROJECT_PATH, 'staticfiles'),
@@ -100,13 +101,14 @@ SECRET_KEY = '*jm2m4y_*7q6z@t2tc(4z9i2r(-q2p3&amp;a8-sq7*rymnh7spjq8'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+#   'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'ajax_file_uploader.middleware.AjaxFileUploadSessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
@@ -131,11 +133,13 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'jquery',
+    'sajax',
     'bootstrap',
     'ajax_file_uploader',
+    'spine',
 
+    'ajaxauth',
     'library',
-    'library_client',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -154,7 +158,7 @@ LOGGING = {
         }
     },
     'handlers': {
-        'tic': {
+        'mail_admins': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'

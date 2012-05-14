@@ -1,4 +1,7 @@
+
+
 $ ->
+
     $('.search-query').typeahead
         sorter: ->
             return ['Arizona', 'Albania on cuba la  mas bonita y hermosa', 'Cuba la mas ']
