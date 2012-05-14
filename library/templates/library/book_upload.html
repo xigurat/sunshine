@@ -1,19 +1,17 @@
-{% extends 'base_site.html' %}
-{% block title %}Sunshine | Book Upload{% endblock %}
-{% block head %}
-    {% include 'spine/head.html' %}
-    {% include 'ajax_file_uploader/head.html' %}
+{% extends 'sunshine/base.html' %}
+
+{% block nav_book_upload %}active{% endblock %}
+
+
+{% block subscript %}
+    {% include 'ajax_file_uploader/script.html' %}
     <script type="text/javascript" src="{{ STATIC_URL }}library/models.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}library/upload.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            Library.uploader = new Library.BookUploader({el: $('#file-uploader')});
-        });
-    </script>
 {% endblock %}
 
 
-{% block content %}
+{% block container %}
+    {% csrf_token %}
     <div id="file-uploader">
         <noscript>
             <div class="forms">
@@ -35,5 +33,4 @@
             </div>
         </noscript>
     </div>
-
 {% endblock %}
