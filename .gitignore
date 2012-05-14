@@ -1,0 +1,12 @@
+*.pyc
+*.pyo
+*.db
+*.dia~
+*.sublime-project
+*.sublime-workspace
+*.bak
+*.pdf
+thumbnail
+.ropeproject
+documents_index
+sunshine_files
