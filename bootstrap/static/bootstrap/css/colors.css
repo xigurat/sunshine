@@ -14,10 +14,10 @@ Grayscale colors
 /*
 Accent colors
 */
-color-blue { color: #049cdb; }
-color-green { color: #46a546; }
-color-re { color: #9d261d; }
-color-yellow { color: #ffc40d; }
-color-orange { color: #f89406; }
-color-pink { color: #c3325f; }
-color-purple { color: #7a43b6; }
+.color-blue { color: #049cdb; }
+.color-green { color: #46a546; }
+.color-red { color: #9d261d; }
+.color-yellow { color: #ffc40d; }
+.color-orange { color: #f89406; }
+.color-pink { color: #c3325f; }
+.color-purple { color: #7a43b6; }
