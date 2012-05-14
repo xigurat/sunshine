@@ -3,37 +3,38 @@
 
 {% block title %}{% block location %}{% endblock %}Sunshine{% endblock %}
 
+{% block brand_url %}{% url home %}{% endblock %}
+
 {% block brand %}Sunshine{% endblock %}
 
 
 {% block nav_lists %}
 
 <div class="nav-collapse">
+
     <ul class="nav">
         {% if user.is_authenticated %}
             <li class="{% block nav_book_upload %}{% endblock %}">
-                <a href="{% url book_upload %}">Upload a book</a>
+                <a href="{% url library_book_upload %}">Upload a book</a>
             </li>
         {% endif %}
 
+        {% if user.is_superuser %}
+            <li>
+                <a href="#">Admin</a>
+            </li>
+        {% endif %}
+
+        <li>
+            <a href="#">Report an error</a>
+        </li>
         <li class="">
             <a href="#">About us</a>
         </li>
     </ul>
 
-    {% block nav_search %}
-    <form class="navbar-search pull-left" action="">
-        <input type="text" class="search-query span3" placeholder="Buscar">
-    </form>
-    {% endblock %}
-
     <ul class="nav pull-right">
-        <li><a href="#">Report an error</a></li>
         {% if user.is_authenticated %}
-            <li>
-                <a href="#">Admin</a>
-            </li>
-            <li class="divider-vertical"></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <i class="icon-envelope icon-white"></i>
@@ -47,29 +48,37 @@
                     <li><a href="#"><i class="icon-refresh"></i> Clear</a></li>
                 </ul>
             </li>
-            <li class="divider-vertical"></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="color-gray-lighter">{{ user.username }}</span> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="#"><i class="icon-user"></i> Profile</a></li>
                     <li><a href="#"><i class="icon-remove"></i> Remove User</a></li>
                     <li class="divider"></li>
-                    <li><a href="#"><i class="icon-repeat"></i> Cambiar de usuario</a></li>
-                    <li><a href="#"><i class="icon-off"></i> Log out</a></li>
+                    <li><a id="logout" href="#"><i class="icon-off"></i> Log out</a></li>
                 </ul>
             </li>
-            <li class="divider-vertical"></li>
         {% else %}
-            <li><a href="#"><strong>Signup</strong></a></li>
-            <li><a href="#"><strong>Login</strong></a></li>
+            <li><a data-toggle="modal" href="#signup-dialog"><strong>Signup</strong></a></li>
+            <li><a data-toggle="modal" href="#login-dialog"><strong>Login</strong></a></li>
         {% endif %}
     </ul>
+
+    {% block nav_search %}
+    <form class="navbar-search pull-right" action="">
+        <input type="text" class="search-query span3" placeholder="Buscar">
+    </form>
+    {% endblock %}
+
 </div>
 
 {% endblock %}
 
 {% block script %}
+    {% include 'sajax/head.html' %}
+    {% include 'spine/head.html' %}
+    <script type="text/javascript" src="{{ STATIC_URL }}bootstrap/js/modals.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}sunshine/js/base.js"></script>
+    {% include 'ajaxauth/scripts.html' %}
     {% block subscript %}
     {% endblock %}
 {% endblock %}
