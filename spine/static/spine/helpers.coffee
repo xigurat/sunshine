@@ -38,7 +38,7 @@ $(document).ajaxSend (e, xhr, settings) =>
     xhr.setRequestHeader 'X-CSRFToken', csrfToken
 
 
-$ () ->
+$ ->
     $(number).live('keypress', isNumberKey) for number in [
         'input.number', 'input[name="phone"]', 'input[name="cellphone"]',
         'input[name="social_security_number"]', 'input.vIntegerField',
@@ -47,5 +47,3 @@ $ () ->
     $(float).live('keypress', isMoneyKey) for float in [
         'input[name="salary"]', 'input.money',
     ]
-
-

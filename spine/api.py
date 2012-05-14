@@ -228,11 +228,6 @@ class SpineAPI(View):
                 self._data = flatten_dict(getattr(self.request, method))
         return self._data
 
-
-
-
-
-
     @property
     def content_type(self):
         self.request.META.get('CONTENT_TYPE') or ''
