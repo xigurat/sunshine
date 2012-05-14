@@ -1,0 +1,105 @@
+<div id="login-error" class="modal hide fade">
+    <div class="modal-header">
+      <a class="close" data-dismiss="modal" >&times;</a>
+      <h3 class="color-red">Login error</h3>
+    </div>
+    <div class="modal-body">
+        <h4>Try to login again</h4>
+        <p>Incorrect user or password</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal" >Close</a>
+    </div>
+</div>
+
+
+<div id="login-dialog" class="modal hide fade">
+    <div class="modal-header">
+      <a class="close" data-dismiss="modal" >&times;</a>
+      <h3>Login</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="username">User name</label>
+                    <div class="controls">
+                        <input type="text" id="username" name="username">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="password">Password</label>
+                    <div class="controls">
+                        <input type="password" id="password" name="password">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="login btn btn-primary">Login</a>
+        <a href="#" class="btn" data-dismiss="modal" >Close</a>
+    </div>
+</div>
+
+
+<div id="signup-dialog" class="modal hide fade">
+    <div class="modal-header">
+      <a class="close" data-dismiss="modal" >&times;</a>
+      <h3>Sign up</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="username">User name</label>
+                    <div class="controls">
+                        <input type="text" id="username" name="username">
+                        <p class="help-block">30 characters or fewer. Letters, numbers and @.+-_ characters.</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="first-name">First name</label>
+                    <div class="controls">
+                        <input type="text" id="first-name" name="first_name">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="last-name">Surname</label>
+                    <div class="controls">
+                        <input type="text" id="last-name" name="last_name">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="email">e-mail</label>
+                    <div class="controls">
+                        <input type="text" id="email" name="email">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="password1">Password</label>
+                    <div class="controls">
+                        <input type="password" id="password1" name="password1">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="password2">Password confirmation</label>
+                    <div class="controls">
+                        <input type="password" id="password2" name="password2">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn btn-primary">Sign up</a>
+        <a href="#" class="btn" data-dismiss="modal" >Close</a>
+    </div>
+</div>
+<script type="text/javascript" src="{{ STATIC_URL }}ajaxauth/logedout.js"></script>
