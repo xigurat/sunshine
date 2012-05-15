@@ -1,0 +1,29 @@
+{% if form.non_field_errors %}
+    <div class="alert alert-error">
+        <a class="close" data-dismiss="alert">×</a>
+        {{ form.non_field_errors|join:', ' }}
+    </div>
+{% endif %}
+
+{% for field in form.hidden_fields %}
+    {{ field }}
+{% endfor %}
+
+{% for field in form.visible_fields %}
+    <div class="control-group {% if field.errors or form.non_field_errors %}error{% endif %} {{ field.css_classes }}">
+        <label class="control-label" for="{{ field.id_for_label }}">{{ field.label|capfirst }}</label>
+        <div class="controls">
+            {% if field.errors %}
+                <script type="text/javascript">
+                    $(function() {
+                        $('#{{ field.id_for_label }}').tooltip({title: "{{ field.errors|join:', ' }}"});
+                    });
+                </script>
+            {% endif %}
+            {{ field }}
+            {% if field.help_text %}
+                <p class="help-block">{{ field.help_text }}</p>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
