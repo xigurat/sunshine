@@ -12,20 +12,29 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+EMAIL_HOST = 'smtp.uci.cu'
+EMAIL_HOST_USER = 'ycarmenate@estudiantes.uci.cu'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = 'Python1405119'
+EMAIL_SUBJECT_PREFIX = '[Sunshine] '
+EMAIL_USE_TLS = True
+
+ACCOUNT_ACTIVATION_DAYS = 7
+
 PROJECT_PATH = dirname(abspath(__file__))
 
 DATABASES = {
     'default': {
         # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         # Or path to database file if using sqlite3.
-        'NAME': join(PROJECT_PATH, 'storage.db'),
+        'NAME': 'sunshine2',
         # Not used with sqlite3.
-        'USER': '',
+        'USER': 'postgres',
         # Not used with sqlite3.
-        'PASSWORD': '',
+        'PASSWORD': 'postgres',
         # Set to empty string for localhost. Not used with sqlite3.
-        'HOST': '',
+        'HOST': 'localhost',
         # Set to empty string for default. Not used with sqlite3.
         'PORT': '',
     }
@@ -80,7 +89,6 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    join(PROJECT_PATH, 'staticfiles'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -99,14 +107,26 @@ SECRET_KEY = '*jm2m4y_*7q6z@t2tc(4z9i2r(-q2p3&amp;a8-sq7*rymnh7spjq8'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
+#   'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #   'django.template.loaders.eggs.Loader',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.contrib.messages.context_processors.messages',
+    'ajaxauth.context_processors.ajaxauth',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'ajax_file_uploader.middleware.AjaxFileUploadSessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -120,9 +140,6 @@ ROOT_URLCONF = 'sunshine.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'sunshine.wsgi.application'
 
-TEMPLATE_DIRS = (
-    join(PROJECT_PATH, 'templates'),
-)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -138,10 +155,10 @@ INSTALLED_APPS = (
     'ajax_file_uploader',
     'spine',
 
+    'sunfront',
+    'registration',
     'ajaxauth',
     'library',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
 )
 
 # A sample logging configuration. The only tangible logging

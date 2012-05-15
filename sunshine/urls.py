@@ -1,16 +1,55 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-
-from .views import Home
-
+from registration import urls as registration
 
 admin.autodiscover()
 
 
 urlpatterns = patterns('',
-    url(r'^$', Home.as_view(), name='home'),
+    url(r'^', include('sunfront.urls')),
     url(r'^', include('library.urls')),
     url(r'^', include('spine.urls')),
     url(r'^', include('sajax.urls')),
     url(r'^admin/', include(admin.site.urls)),
+
+
+    # Registration app URLs
+
+    url(r'^login/$',
+        registration.auth_views.login,
+        {'template_name': 'registration/login.html'},
+        name='auth_login'),
+
+    url(r'^account/activate/(?P<activation_key>\w+)/$',
+        registration.activate,
+        name='registration_activate'),
+
+    # - password change throw ajax
+
+    url(r'^account/password/change/$',
+        registration.auth_views.password_change,
+        name='auth_password_change'),
+
+    url(r'^account/password/change/done/$',
+        registration.auth_views.password_change_done,
+        name='auth_password_change_done'),
+
+
+    # - password reset
+
+    url(r'^password/reset/$',
+        registration.auth_views.password_reset,
+        name='auth_password_reset'),
+
+    url(r'^password/reset/confirm/(?P<uidb36>[0-9A-Za-z]+)-(?P<token>.+)/$',
+        registration.auth_views.password_reset_confirm,
+        name='auth_password_reset_confirm'),
+
+    url(r'^password/reset/complete/$',
+        registration.auth_views.password_reset_complete,
+        name='auth_password_reset_complete'),
+
+    url(r'^password/reset/done/$',
+        registration.auth_views.password_reset_done,
+        name='auth_password_reset_done'),
 )
