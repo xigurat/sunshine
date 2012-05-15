@@ -5,6 +5,8 @@ from django.http import HttpResponseRedirect
 from django.utils import simplejson as json
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
 
 from library.forms import BookUploadForm, BookForm
 from library.models import Book
@@ -42,6 +44,8 @@ class BookUpload(TemplateView):
         else:
             return self.get(self, request, book_upload_form=book_upload_form,
                                 *args, **kwargs)
+
+    dispatch = method_decorator(login_required)(TemplateView.dispatch)
 
 
 class BookDetails(TemplateView):
