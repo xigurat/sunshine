@@ -1,0 +1,11 @@
+
+Hi, dear new user.
+
+To acivate your account in Sunshine, please go to this URL:
+
+http://{{ site }}{% url registration_activate activation_key %}
+
+This URL expires in {{ expiration_days }} days.
+
+
+Thanks for using Sunshine.

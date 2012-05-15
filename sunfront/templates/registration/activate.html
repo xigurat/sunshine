@@ -1,0 +1,14 @@
+{% extends 'sunshine/base.html' %}
+
+{% block container %}
+
+<div class="hero-unit centered">
+    <h1>Account activation {% if account %}success{% else %}failed{% endif %}!</h1>
+    {% if account %}
+        <p>Now you can <a href=""><strong>log in</strong></a>.</p>
+    {% else %}
+        <p>Your activation has probably expired.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

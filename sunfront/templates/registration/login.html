@@ -1,0 +1,13 @@
+{% extends 'sunshine/base.html' %}
+{% block container %}
+
+<div class="hero-unit span6 offset2">
+    {% if user.is_authenticated %}
+        <h1 class="centered">Go to explore!</h1>
+    {% else %}
+        <h2 class="centered">Login</h2>
+        {% include 'ajaxauth/login_form_with_actions.html' %}
+    {% endif %}
+</div>
+
+{% endblock %}
