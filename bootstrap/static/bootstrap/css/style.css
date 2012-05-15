@@ -17,6 +17,9 @@ hr.soften {
   border: 0;
 }
 
+.centered { text-align: center; }
+
+.hero-unit h2 { margin-bottom: 1em; }
 
 /* Subnav */
 .subnav {
