@@ -25,11 +25,11 @@
     return jQuery(jQuery.jqote(template, data));
   };
 
-  $.setChecked = function(checkbox, value) {
+  $.fn.setChecked = function(value) {
     if (value) {
-      return checkbox.attr('checked', 'checked');
+      return this.attr('checked', 'checked');
     } else {
-      return checkbox.removeAttr('checked');
+      return this.removeAttr('checked');
     }
   };
 

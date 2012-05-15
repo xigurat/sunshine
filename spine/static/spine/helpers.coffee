@@ -2,6 +2,7 @@
 $.query = (query_data) ->
     data: JSON.stringify(query_data or {})
 
+
 $.getCookies = () ->
     cookies = {}
     for cookie in document.cookie.split('; ')
@@ -9,14 +10,16 @@ $.getCookies = () ->
         cookies[attr_name] = value
     cookies
 
+
 $.render = (template, data) ->
     jQuery jQuery.jqote template, data
 
-$.setChecked = (checkbox, value) ->
+
+$.fn.setChecked = (value) ->
     if value
-        checkbox.attr 'checked', 'checked'
+        @attr 'checked', 'checked'
     else
-        checkbox.removeAttr 'checked'
+        @removeAttr 'checked'
 
 
 isNumberKey = (event) ->
