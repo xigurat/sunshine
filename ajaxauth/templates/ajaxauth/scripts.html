@@ -1,5 +1,5 @@
 {% if user.is_authenticated %}
-    <script type="text/javascript" src="{{ STATIC_URL }}ajaxauth/logedin.js"></script>
+    {% include 'ajaxauth/logged_in.html' %}
 {% else %}
-    {% include 'ajaxauth/logedout.html' %}
+    {% include 'ajaxauth/logged_out.html' %}
 {% endif %}

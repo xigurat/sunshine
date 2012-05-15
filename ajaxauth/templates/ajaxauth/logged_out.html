@@ -1,3 +1,36 @@
+<div id="ajax-error" class="modal hide fade">
+    <div class="modal-header">
+      <a class="close" data-dismiss="modal" >&times;</a>
+      <h3 class="color-red">Comunication error</h3>
+    </div>
+    <div class="modal-body">
+        <h4>Sorry, try again later.</h4>
+        <p>Right now there is a comunication problem. The server is having some troubles.</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal" >Close</a>
+    </div>
+</div>
+
+<div id="signup-successful" class="modal hide fade">
+    <div class="modal-header">
+      <a class="close" data-dismiss="modal" >&times;</a>
+      <h3>You has signed up sucessfuly!</h3>
+    </div>
+    <div class="modal-body">
+        <h4>Check your email for a confirmation email.</h4>
+        <p>
+            Right now we has sent to you a confirmation email.
+            Click in the link that we sent you to activate your account.
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal" >Close</a>
+    </div>
+</div>
+
+
+
 <div id="login-error" class="modal hide fade">
     <div class="modal-header">
       <a class="close" data-dismiss="modal" >&times;</a>
@@ -19,26 +52,10 @@
       <h3>Login</h3>
     </div>
     <div class="modal-body">
-        <form class="form-horizontal">
-            <fieldset>
-                <div class="control-group">
-                    <label class="control-label" for="username">User name</label>
-                    <div class="controls">
-                        <input type="text" id="username" name="username">
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <label class="control-label" for="password">Password</label>
-                    <div class="controls">
-                        <input type="password" id="password" name="password">
-                    </div>
-                </div>
-            </fieldset>
-        </form>
+        {% include 'ajaxauth/login_form.html' %}
     </div>
     <div class="modal-footer">
-        <a href="#" class="login btn btn-primary">Login</a>
+        <a href="#" class="ok btn btn-primary">Login</a>
         <a href="#" class="btn" data-dismiss="modal" >Close</a>
     </div>
 </div>
@@ -52,6 +69,8 @@
     <div class="modal-body">
         <form class="form-horizontal">
             <fieldset>
+                {{ signup_form.as_bootstrap }}
+<!--
                 <div class="control-group">
                     <label class="control-label" for="username">User name</label>
                     <div class="controls">
@@ -94,12 +113,13 @@
                         <input type="password" id="password2" name="password2">
                     </div>
                 </div>
+-->
             </fieldset>
         </form>
     </div>
     <div class="modal-footer">
-        <a href="#" class="btn btn-primary">Sign up</a>
+        <a href="#" class="ok btn btn-primary">Sign up</a>
         <a href="#" class="btn" data-dismiss="modal" >Close</a>
     </div>
 </div>
-<script type="text/javascript" src="{{ STATIC_URL }}ajaxauth/logedout.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}ajaxauth/logged_out.js"></script>
