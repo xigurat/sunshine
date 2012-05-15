@@ -1,4 +1,6 @@
 
+OK = 200
+
 $.sajax = (fname, kwargs) ->
     [app, func] = fname.split '.'
     kwargs ?= {}
@@ -12,5 +14,8 @@ $.sajax = (fname, kwargs) ->
         processData: false
         async: false
         headers: {'X-Requested-With': 'XMLHttpRequest'}
+
+    if response.status isnt OK
+        throw new Error 'Error ' + response.status
 
     JSON.parse response.responseText
