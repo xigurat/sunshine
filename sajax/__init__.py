@@ -2,7 +2,10 @@
 
 import json
 from functools import wraps
+
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_protect
+from django.utils.translation import ugettext as _
 
 try:
     from spine.api import SpineJSONEncoder
@@ -13,10 +16,14 @@ else:
 
 
 def register(function):
+    @csrf_protect
     @wraps(function)
     def wrapper(request):
         if request.method != 'POST':
-            return HttpResponse(function.__doc__, mimetype='text/plain')
+            response = HttpResponse(
+                function.__doc__ or _('Undocumented'),
+                mimetype='text/plain')
+            return response
 
         response = function(request, **json.loads(request.body))
         return HttpResponse(encode(response), mimetype='application/json')
