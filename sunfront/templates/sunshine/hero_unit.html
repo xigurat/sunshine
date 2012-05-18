@@ -1,0 +1,11 @@
+{% extends 'sunshine/base.html' %}
+
+{% block container %}
+{% block pre_hero_unit %}{% endblock %}
+
+<div class="hero-unit {% block hero_unit_classes %}{% endblock %}">
+    {% block hero_unit %}{% endblock %}
+</div>
+
+{% block pos_hero_unit %}{% endblock %}
+{% endblock %}

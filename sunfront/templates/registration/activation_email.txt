@@ -1,11 +1,12 @@
+{% load i18n %}
 
-Hi, dear new user.
+{% trans 'Hi, dear new user.' %}
 
-To acivate your account in Sunshine, please go to this URL:
+{% trans 'To acivate your account in' %} {{ site }}, {% trans 'please, go to this URL' %}:
 
 http://{{ site }}{% url registration_activate activation_key %}
 
-This URL expires in {{ expiration_days }} days.
+{% trans 'This URL expires in' %} {{ expiration_days }} {% trans 'days' %}.
 
 
-Thanks for using Sunshine.
+{% trans 'Thanks for using Sunshine.' %}

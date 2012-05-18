@@ -1,13 +1,26 @@
-{% extends 'sunshine/base.html' %}
-{% block container %}
+{% extends 'sunshine/small_hero_unit.html' %}
+{% load i18n %}
 
-<div class="hero-unit span6 offset2">
-    {% if user.is_authenticated %}
-        <h1 class="centered">Go to explore!</h1>
-    {% else %}
-        <h2 class="centered">Login</h2>
-        {% include 'ajaxauth/login_form_with_actions.html' %}
-    {% endif %}
-</div>
+{% block location %}{% trans 'Log in' %} | {% endblock %}
+
+{% block hero_unit %}
+
+{% if user.is_authenticated %}
+    <h1 class="centered">{% trans 'Go to explore!' %}</h1>
+{% else %}
+    <h2 class="centered">{% trans 'Log in' %}</h2>
+    <form action="{% url auth_login %}?next={{ next }}" method="POST" class="form-horizontal">
+        <fieldset>
+            {{ form.as_bootstrap }}
+            {% csrf_token %}
+            {% if form.errors %}
+                <p class="centered"><a href="{% url auth_password_reset %}">{% trans 'I forgot my password...' %}</a></p>
+            {% endif %}
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">{% trans 'Log in' %}</button>
+            </div>
+        </fieldset>
+    </form>
+{% endif %}
 
 {% endblock %}

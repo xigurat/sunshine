@@ -1,13 +1,14 @@
 {% extends 'sunshine/base.html' %}
+{% load i18n %}
 
 {% block container %}
 
 <div class="hero-unit centered">
-    <h1>Account activation {% if account %}success{% else %}failed{% endif %}!</h1>
+    <h1>{% trans 'Account activation' %} {% if account %}{% trans 'success' %}{% else %}{% trans 'failed' %}{% endif %}!</h1>
     {% if account %}
-        <p>Now you can <a href=""><strong>log in</strong></a>.</p>
+        <p>{% trans 'Now you can' %} <a href="{% url auth_login %}"><strong>{% trans 'log in' %}</strong></a>.</p>
     {% else %}
-        <p>Your activation has probably expired.</p>
+        <p>{% trans 'Your activation link has probably expired.' %}</p>
     {% endif %}
 </div>
 

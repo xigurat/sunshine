@@ -1,4 +1,5 @@
-{% extends 'sunshine/base.html' %}
+{% extends 'sunshine/hero_unit.html' %}
+{% load i18n %}
 
 {% block head %}
     <link href="{{ STATIC_URL }}sunshine/css/index.css" rel="stylesheet" type="text/css" />
@@ -7,20 +8,18 @@
 
 {% block nav_search %}{% endblock %}
 
-{% block container %}
+{% block hero_unit %}
 
-<div class="hero-unit">
-    <h1>Sunshine</h1>
-    <p>Compartiendo el conocimiento que brilla,
-    <strong>+1.230</strong> libros y subiendo...</p>
-    <small>este sitio está en pruebas <em class="label label-warning">beta</em></small>
+<h1>Sunshine</h1>
+<p>{% trans 'Sharing the knowledge that shines' %},
+<strong>+1.230</strong> {% trans 'documents and growing' %}...</p>
+<small>{% trans 'This site is in' %} <em class="label label-warning">beta</em></small>
 
-    <div class="row">
-        <form class="index-search-form offset1" action="" method="post">
-            <input type="text" class="search-query span7" name="" value="" id="" />
-            <input class="btn btn-primary span2" type="submit" value="Buscar" />
-        </form>
-    </div>
+<div class="row-fluid">
+    <form class="index-search-form offset1" action="" method="post">
+        <input type="text" placeholder="{% trans 'Type what you are looking for here...' %}" class="search-query  span7" autofocus="autofocus" name="q" value="" id="" />
+        <input class="btn btn-primary span2" type="submit" value="{% trans 'Search' %}"/>
+    </form>
 </div>
 
 {% endblock %}

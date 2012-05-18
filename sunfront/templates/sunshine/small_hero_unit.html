@@ -1,0 +1,11 @@
+{% extends 'sunshine/base.html' %}
+
+{% block container %}
+<div class="row">
+    <div class="hero-unit span5 offset3 {% block hero_unit_classes %}{% endblock %}">
+        {% block hero_unit %}{% endblock %}
+    </div>
+</div>
+
+{% block pos_hero_unit %}{% endblock %}
+{% endblock %}
