@@ -3,6 +3,7 @@
 <head>
 	<title>{% block title %}Title{% endblock %}</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="generator" content="Geany 0.21" />
     <link href="{{ STATIC_URL }}/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="{{ STATIC_URL }}/bootstrap/css/style.css" rel="stylesheet" type="text/css" />
@@ -26,7 +27,9 @@
                 </a>
                 <a class="brand" href="{% block brand_url %}{% endblock %}">{% block brand %}Brand{% endblock %}</a>
 
-                {% block nav_lists %}{% endblock %}
+                <div class="nav-collapse">
+                    {% block nav_lists %}{% endblock %}
+                </div>
 
             </div>
         </div>
@@ -36,7 +39,7 @@
 
     <!-- Container -->
 
-    <div class="container">
+    <div class="container-fluid">
 
         <!-- Content -->
 
