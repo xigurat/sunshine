@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-17 23:56-0400\n"
+"PO-Revision-Date: 2012-05-17 23:56-0500\n"
+"Last-Translator: Eddy Ernesto del Valle Pino <edelvalle@hab.uci.cu>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: forms.py:8
+msgid "first name"
+msgstr "nombres"
+
+#: forms.py:9
+msgid "last name"
+msgstr "apellidos"
+
+#: templates/ajaxauth/logged_out.html:6
+msgid "Communitacion error"
+msgstr "Error de comunicación"
+
+#: templates/ajaxauth/logged_out.html:9
+msgid "Sorry, try again later"
+msgstr "Lo sentimos, intente más tarde"
+
+#: templates/ajaxauth/logged_out.html:10
+msgid "Right now there is a comunication problem. The server is having some troubles."
+msgstr "En este momento hay un problema de comunicación. El servidor está teniendo algunos problemas."
+
+#: templates/ajaxauth/logged_out.html:13
+#: templates/ajaxauth/logged_out.html:30
+#: templates/ajaxauth/logged_out.html:46
+#: templates/ajaxauth/logged_out.html:62
+#: templates/ajaxauth/logged_out.html:81
+msgid "Close"
+msgstr "Cerrar"
+
+#: templates/ajaxauth/logged_out.html:20
+msgid "You has signed up successfully!"
+msgstr "Usted se ha registrado exitosamente"
+
+#: templates/ajaxauth/logged_out.html:23
+msgid "Check your email for a confirmation email"
+msgstr "Chequee su correo, le enviamos un correo de confirmación"
+
+#: templates/ajaxauth/logged_out.html:25
+msgid "Right now we has sent to you a confirmation email."
+msgstr "Ahora le hemos enviado un correo de confirmación."
+
+#: templates/ajaxauth/logged_out.html:26
+msgid "Click in the link that we sent you to activate your account."
+msgstr "Haga clic en el enlace que le enviamos para activar su cuenta."
+
+#: templates/ajaxauth/logged_out.html:39
+msgid "Login error"
+msgstr "Error de acceso"
+
+#: templates/ajaxauth/logged_out.html:42
+msgid "Try to login again"
+msgstr "Intente iniciar sesión de nuevo"
+
+#: templates/ajaxauth/logged_out.html:43
+msgid "Incorrect user or password."
+msgstr "Usuario o contraseña incorrecta"
+
+#: templates/ajaxauth/logged_out.html:54
+#: templates/ajaxauth/logged_out.html:61
+msgid "Log in"
+msgstr "Iniciar sesión"
+
+#: templates/ajaxauth/logged_out.html:70
+#: templates/ajaxauth/logged_out.html:80
+msgid "Sign up"
+msgstr "Registrarse"
+
