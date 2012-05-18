@@ -1,7 +1,5 @@
-<form action="{% url auth_login %}?next={{ next }}" method="POST" class="form-horizontal">
+<form class="form-horizontal">
     <fieldset>
         {{ login_form.as_bootstrap }}
-        {% csrf_token %}
-        {% block form_actions %}{% endblock %}
     </fieldset>
 </form>
