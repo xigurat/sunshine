@@ -5,14 +5,14 @@ from .views import BookUpload, BookEdit, BookDetails, MyBooks, UserBooks
 
 
 urlpatterns = patterns('',
-    url(r'^book/upload/$', BookUpload.as_view(),
+    url(r'^$', BookUpload.as_view(),
         name='library_book_upload'),
-    url(r'^book/mybooks/$', MyBooks.as_view(),
+    url(r'^mybooks/$', MyBooks.as_view(),
         name='library_my_books'),
-    url(r'^book/userbooks/$', UserBooks.as_view(),
+    url(r'^userbooks/$', UserBooks.as_view(),
         name='library_user_books'),
-    url(r'^book/(?P<id>\d+)/$', BookDetails.as_view(),
+    url(r'^document/(?P<id>\d+)/$', BookDetails.as_view(),
         name='library_book_details'),
-    url(r'^book/(?P<id>\d+)/edit/$', BookEdit.as_view(),
+    url(r'^docuemnt/(?P<id>\d+)/edit/$', BookEdit.as_view(),
         name='library_book_edit'),
 )
