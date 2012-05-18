@@ -1,13 +1,9 @@
 {% if form.non_field_errors %}
     <div class="alert alert-error">
         <a class="close" data-dismiss="alert">×</a>
-        {{ form.non_field_errors|join:', ' }}
+        {{ form.non_field_errors|join:'. ' }}
     </div>
 {% endif %}
-
-{% for field in form.hidden_fields %}
-    {{ field }}
-{% endfor %}
 
 {% for field in form.visible_fields %}
     <div class="control-group {% if field.errors or form.non_field_errors %}error{% endif %} {{ field.css_classes }}">
@@ -26,4 +22,8 @@
             {% endif %}
         </div>
     </div>
+{% endfor %}
+
+{% for field in form.hidden_fields %}
+    {{ field }}
 {% endfor %}
