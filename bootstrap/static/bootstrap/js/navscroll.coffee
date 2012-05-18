@@ -1,6 +1,7 @@
 
 $ ->
 
+    # Scroll the Subnav when the page is scrolled
     $win = $(window)
     $nav = $('.subnav')
     navTop = $('.subnav').length and $('.subnav').offset().top - 40
