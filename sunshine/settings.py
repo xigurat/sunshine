@@ -21,6 +21,8 @@ EMAIL_USE_TLS = True
 
 ACCOUNT_ACTIVATION_DAYS = 7
 
+LOGIN_URL = '/login/'
+
 PROJECT_PATH = dirname(abspath(__file__))
 
 DATABASES = {
@@ -148,7 +150,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
     'jquery',
     'sajax',
     'bootstrap',
@@ -159,6 +160,8 @@ INSTALLED_APPS = (
     'registration',
     'ajaxauth',
     'library',
+    'django.contrib.admin',
+
 )
 
 # A sample logging configuration. The only tangible logging
