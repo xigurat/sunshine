@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-17 23:56-0400\n"
-"PO-Revision-Date: 2012-05-17 23:56-0500\n"
+"POT-Creation-Date: 2012-05-18 16:00-0400\n"
+"PO-Revision-Date: 2012-05-18 16:00-0500\n"
 "Last-Translator: Eddy Ernesto del Valle Pino <edelvalle@hab.uci.cu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -25,6 +25,36 @@ msgstr "nombres"
 msgid "last name"
 msgstr "apellidos"
 
+#: templates/ajaxauth/logged_in.html:6
+msgid "Password changed successfully"
+msgstr "Contraseña cambiada exitosamente"
+
+#: templates/ajaxauth/logged_in.html:9
+msgid "Your password has been changed."
+msgstr "Su contraseña ha sido cambiada."
+
+#: templates/ajaxauth/logged_in.html:11
+msgid "Now you can use your new password to log in."
+msgstr "Ahora puede usar su nueva contraseña para iniciar sesión."
+
+#: templates/ajaxauth/logged_in.html:15
+#: templates/ajaxauth/logged_in.html:33
+#: templates/ajaxauth/logged_out.html:13
+#: templates/ajaxauth/logged_out.html:30
+#: templates/ajaxauth/logged_out.html:46
+#: templates/ajaxauth/logged_out.html:62
+#: templates/ajaxauth/logged_out.html:81
+msgid "Close"
+msgstr "Cerrar"
+
+#: templates/ajaxauth/logged_in.html:22
+msgid "Change password"
+msgstr "Cambiar contraseña"
+
+#: templates/ajaxauth/logged_in.html:32
+msgid "Change"
+msgstr "Cambiar"
+
 #: templates/ajaxauth/logged_out.html:6
 msgid "Communitacion error"
 msgstr "Error de comunicación"
@@ -36,14 +66,6 @@ msgstr "Lo sentimos, intente más tarde"
 #: templates/ajaxauth/logged_out.html:10
 msgid "Right now there is a comunication problem. The server is having some troubles."
 msgstr "En este momento hay un problema de comunicación. El servidor está teniendo algunos problemas."
-
-#: templates/ajaxauth/logged_out.html:13
-#: templates/ajaxauth/logged_out.html:30
-#: templates/ajaxauth/logged_out.html:46
-#: templates/ajaxauth/logged_out.html:62
-#: templates/ajaxauth/logged_out.html:81
-msgid "Close"
-msgstr "Cerrar"
 
 #: templates/ajaxauth/logged_out.html:20
 msgid "You has signed up successfully!"
