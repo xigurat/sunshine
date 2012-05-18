@@ -7,9 +7,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^', include('sunfront.urls')),
-    url(r'^', include('library.urls')),
     url(r'^', include('spine.urls')),
     url(r'^', include('sajax.urls')),
+    url(r'^library/', include('library.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
 
@@ -23,17 +23,6 @@ urlpatterns = patterns('',
     url(r'^account/activate/(?P<activation_key>\w+)/$',
         registration.activate,
         name='registration_activate'),
-
-    # - password change throw ajax
-
-    url(r'^account/password/change/$',
-        registration.auth_views.password_change,
-        name='auth_password_change'),
-
-    url(r'^account/password/change/done/$',
-        registration.auth_views.password_change_done,
-        name='auth_password_change_done'),
-
 
     # - password reset
 
