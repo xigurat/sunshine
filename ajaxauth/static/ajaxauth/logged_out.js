@@ -11,11 +11,6 @@
 
     LoginController.name = 'LoginController';
 
-    LoginController.prototype.elements = {
-      '[name="username"]': 'username',
-      '[name="password"]': 'password'
-    };
-
     function LoginController() {
       this.on_ok = __bind(this.on_ok, this);
       LoginController.__super__.constructor.apply(this, arguments);
@@ -35,7 +30,8 @@
         this.hide();
         return document.location.reload();
       } else {
-        return this.login_error.show();
+        this.login_error.show();
+        return this.$('.password-reset').show();
       }
     };
 
@@ -48,15 +44,6 @@
     __extends(SignupController, _super);
 
     SignupController.name = 'SignupController';
-
-    SignupController.prototype.elements = {
-      '[name="username"]': 'username',
-      '[name="first_name"]': 'first_name',
-      '[name="last_name"]': 'last_name',
-      '[name="email"]': 'email',
-      '[name="password1"]': 'password1',
-      '[name="password2"]': 'password2'
-    };
 
     function SignupController() {
       this.on_ok = __bind(this.on_ok, this);
@@ -87,7 +74,6 @@
         return;
       }
       if (operation.is_success) {
-        this.log('si');
         this.signup_successful.show();
         return this.on_dismiss();
       } else {

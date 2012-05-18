@@ -2,10 +2,6 @@
 
 class LoginController extends Bootstrap.Modal
 
-    elements:
-        '[name="username"]': 'username'
-        '[name="password"]': 'password'
-
     constructor: ->
         super
         @login_error = new Bootstrap.ModalMessage
@@ -22,17 +18,10 @@ class LoginController extends Bootstrap.Modal
             document.location.reload()
         else
             @login_error.show()
+            @$('.password-reset').show()
 
 
 class SignupController extends Bootstrap.Modal
-
-    elements:
-        '[name="username"]': 'username'
-        '[name="first_name"]': 'first_name'
-        '[name="last_name"]': 'last_name'
-        '[name="email"]': 'email'
-        '[name="password1"]': 'password1'
-        '[name="password2"]': 'password2'
 
     constructor: ->
         super
@@ -59,7 +48,6 @@ class SignupController extends Bootstrap.Modal
             return
 
         if operation.is_success
-            @log 'si'
             @signup_successful.show()
             @on_dismiss()
         else
