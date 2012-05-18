@@ -1,0 +1,392 @@
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# Antoni Aloy <antoni.aloy@trespams.com>, 2012.
+# Jannis Leidel <jannis@leidel.info>, 2011.
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2011.
+#   <serra.guillem@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: Django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-17 22:04-0400\n"
+"PO-Revision-Date: 2012-05-18 12:58-0500\n"
+"Last-Translator: Eddy Ernesto del Valle Pino <edelvalle@hab.uci.cu>\n"
+"Language-Team: Spanish (Castilian) (http://www.transifex.net/projects/p/django/language/es/)\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: templates/registration/activate.html:7
+msgid "Account activation"
+msgstr "Activación de cuenta"
+
+#: templates/registration/activate.html:7
+msgid "success"
+msgstr "exitosa"
+
+#: templates/registration/activate.html:7
+msgid "failed"
+msgstr "fallida"
+
+#: templates/registration/activate.html:9
+msgid "Now you can"
+msgstr "Ahora puede"
+
+#: templates/registration/activate.html:9
+msgid "log in"
+msgstr "iniciar sesión"
+
+#: templates/registration/activate.html:11
+msgid "Your activation link has probably expired."
+msgstr "Su enlace de activación posiblemente ha expirado."
+
+#: templates/registration/activation_email.txt:3
+msgid "Hi, dear new user."
+msgstr "Hola, querido nuevo usuario:"
+
+#: templates/registration/activation_email.txt:5
+msgid "To acivate your account in"
+msgstr "Para activar su cuenta en"
+
+#: templates/registration/activation_email.txt:5
+msgid "please, go to this URL"
+msgstr "por favr, vaya a esta URL"
+
+#: templates/registration/activation_email.txt:9
+msgid "This URL expires in"
+msgstr "Esta URL expira en"
+
+#: templates/registration/activation_email.txt:9
+msgid "days"
+msgstr "días"
+
+#: templates/registration/activation_email.txt:12
+msgid "Thanks for using Sunshine."
+msgstr "Gracias por usar Sunshine."
+
+#: templates/registration/activation_email_subject.txt:2
+msgid "Account activation from"
+msgstr "Formulario de activación de cuenta"
+
+#: templates/registration/login.html:4
+#: templates/registration/login.html:11
+#: templates/registration/login.html:20
+#: templates/registration/password_reset_complete.html:12
+#: templates/sunshine/base.html:61
+msgid "Log in"
+msgstr "Iniciar sesión"
+
+#: templates/registration/login.html:9
+msgid "Go to explore!"
+msgstr "¡Vaya a explorar!"
+
+#: templates/registration/login.html:17
+msgid "I forgot my password..."
+msgstr "Olvidé mi contraseña..."
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset complete"
+msgstr "Restablecimiento de contraseña completado"
+
+#: templates/registration/password_reset_complete.html:9
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "Su contraseña ha sido esta"
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:8
+msgid "Password reset"
+msgstr "Restablecer contraseña"
+
+#: templates/registration/password_reset_confirm.html:14
+msgid "Enter new password"
+msgstr "Entre una nueva contraseña"
+
+#: templates/registration/password_reset_confirm.html:16
+msgid "Please enter your new password twice so we can verify you typed it in correctly."
+msgstr "Por favir entre su nueva contraseña dos veces, para que podamos verificar que la ha escrito correctamente."
+
+#: templates/registration/password_reset_confirm.html:23
+msgid "Change my password"
+msgstr "Cambiar mi contraseña"
+
+#: templates/registration/password_reset_confirm.html:30
+msgid "Password reset unsuccessful"
+msgstr "Restablecimiento de contraseña fallido"
+
+#: templates/registration/password_reset_confirm.html:32
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a new password reset."
+msgstr "El enlace de restablecimiento de contraseña era invalido, seguramente por haberse utilizado previamente. Por favor, solicite un nuevo restablecimiento de contraseña."
+
+#: templates/registration/password_reset_done.html:4
+#: templates/registration/password_reset_done.html:8
+msgid "Password reset successful"
+msgstr "Restablecimiento de contraseña exitoso"
+
+#: templates/registration/password_reset_done.html:10
+msgid "We've e-mailed you instructions for setting your password to the e-mail address you submitted. You should be receiving it shortly."
+msgstr "Le hemos enviado un correo electrónico con instrucciones para cambiar su contraseña a la dirección que nos ha suministrado. Debería recibirlo en breve."
+
+#: templates/registration/password_reset_form.html:9
+msgid "Forgotten your password? Enter your e-mail address below, and we'll e-mail instructions for setting a new one."
+msgstr "¿Ha olvidado su contraseña? Introduzca su dirección de correo electrónico, y le enviaremos instrucciones para cambiarla por una nueva."
+
+#: templates/registration/password_reset_form.html:16
+msgid "Reset my password"
+msgstr "Restablecer mi contraseña"
+
+#: templates/sunshine/base.html:16
+msgid "Upload documents"
+msgstr "Subir documentos"
+
+#: templates/sunshine/base.html:22
+msgid "Administration"
+msgstr "Administración"
+
+#: templates/sunshine/base.html:27
+msgid "Report an error"
+msgstr "Reportar un error"
+
+#: templates/sunshine/base.html:30
+msgid "About us"
+msgstr "Sobre nosotros"
+
+#: templates/sunshine/base.html:46
+msgid "Clear"
+msgstr "Limpiar"
+
+#: templates/sunshine/base.html:52
+msgid "Profile"
+msgstr "Perfil"
+
+#: templates/sunshine/base.html:53
+msgid "Remove account"
+msgstr "Eliminar cuenta"
+
+#: templates/sunshine/base.html:54
+msgid "Change password"
+msgstr "Cambiar contraseña"
+
+#: templates/sunshine/base.html:56
+msgid "Log out"
+msgstr "Cerrar sesión"
+
+#: templates/sunshine/base.html:60
+msgid "Sign up"
+msgstr "Registrarse"
+
+#: templates/sunshine/base.html:67
+#: templates/sunshine/index.html:21
+msgid "Search"
+msgstr "Buscar"
+
+#: templates/sunshine/index.html:14
+msgid "Sharing the knowledge that shines"
+msgstr "Compartiendo el conocimiento que brilla"
+
+#: templates/sunshine/index.html:15
+msgid "documents and growing"
+msgstr "documentos y creciendo"
+
+#: templates/sunshine/index.html:16
+msgid "This site is in"
+msgstr "Este sitio está en"
+
+#: templates/sunshine/index.html:20
+msgid "Type what you are looking for here..."
+msgstr "Escribe aquí lo que estás buscando..."
+
+#~ msgid "Personal info"
+#~ msgstr "Información personal"
+
+#~ msgid "Permissions"
+#~ msgstr "Permisos"
+
+#~ msgid "Important dates"
+#~ msgstr "Fechas importantes"
+
+#~ msgid "A user with that username already exists."
+#~ msgstr "Ya existe un usuario con este nombre."
+
+#~ msgid "The two password fields didn't match."
+#~ msgstr "Las dos contraseñas no coinciden."
+
+#~ msgid "Username"
+#~ msgstr "Nombre de usuario"
+
+#~ msgid ""
+#~ "Required. 30 characters or fewer. Letters, digits and @/./+/-/_ only."
+#~ msgstr ""
+#~ "Requerido. 30 caracteres o menos. Letras, dígitos y @/./+/-/_ solamente."
+
+#~ msgid ""
+#~ "This value may contain only letters, numbers and @/./+/-/_ characters."
+#~ msgstr "Este valor puede contener sólo letras, números y @/./+/-/_."
+
+#~ msgid "Password confirmation"
+#~ msgstr "Contraseña (confirmación)"
+
+#~ msgid "Enter the same password as above, for verification."
+#~ msgstr "Introduzca la misma contraseña que arriba, para verificación."
+
+#~ msgid ""
+#~ "Raw passwords are not stored, so there is no way to see this user's "
+#~ "password, but you can change the password using <a href=\"password/"
+#~ "\">this form</a>."
+#~ msgstr ""
+#~ "Las contraseñas no se almacenan en bruto, así que no hay manera de ver la "
+#~ "contraseña del usuario, pero se puede cambiar la contraseña mediante <a "
+#~ "href=\"password/\">este formulario</a> ."
+
+#~ msgid ""
+#~ "Please enter a correct username and password. Note that both fields are "
+#~ "case-sensitive."
+#~ msgstr ""
+#~ "Por favor, introduzca un nombre de usuario y contraseña correctos. Note "
+#~ "que ambos campos son sensibles a mayúsculas/minúsculas."
+
+#~ msgid ""
+#~ "Your Web browser doesn't appear to have cookies enabled. Cookies are "
+#~ "required for logging in."
+#~ msgstr ""
+#~ "Su navegador no parece tener las cookies habilitadas. Las cookies se "
+#~ "necesitan para poder ingresar."
+
+#~ msgid ""
+#~ "That e-mail address doesn't have an associated user account. Are you sure "
+#~ "you've registered?"
+#~ msgstr ""
+#~ "Esta dirección de correo electrónico no tiene una cuenta de usuario "
+#~ "asociada. ¿Está seguro de que se ha registrado?"
+
+#~ msgid ""
+#~ "The user account associated with this e-mail address cannot reset the "
+#~ "password."
+#~ msgstr ""
+#~ "La cuenta de usuario asociada a esta dirección de correo electrónico no "
+#~ "se puede restablecer la contraseña."
+
+#~ msgid "E-mail"
+#~ msgstr "Correo electrónico"
+
+#~ msgid "New password confirmation"
+#~ msgstr "Contraseña nueva (confirmación):"
+
+#~ msgid "Your old password was entered incorrectly. Please enter it again."
+#~ msgstr ""
+#~ "Su contraseña antigua es incorrecta. Por favor, vuelva a introducirla "
+#~ "correctamente."
+
+#~ msgid "Old password"
+#~ msgstr "Contraseña antigua"
+
+#~ msgid "Password (again)"
+#~ msgstr "Contraseña (de nuevo)"
+
+#~ msgid "algorithm"
+#~ msgstr "algoritmo"
+
+#~ msgid "salt"
+#~ msgstr "sal"
+
+#~ msgid "hash"
+#~ msgstr "función resumen"
+
+#~ msgid "work factor"
+#~ msgstr "factor trabajo"
+
+#~ msgid "checksum"
+#~ msgstr "suma de verificación"
+
+#~ msgid "name"
+#~ msgstr "nombre"
+
+#~ msgid "codename"
+#~ msgstr "nombre en código"
+
+#~ msgid "permission"
+#~ msgstr "permiso"
+
+#~ msgid "permissions"
+#~ msgstr "permisos"
+
+#~ msgid "group"
+#~ msgstr "grupo"
+
+#~ msgid "groups"
+#~ msgstr "grupos"
+
+#~ msgid "username"
+#~ msgstr "nombre de usuario"
+
+#~ msgid ""
+#~ "Required. 30 characters or fewer. Letters, numbers and @/./+/-/_ "
+#~ "characters"
+#~ msgstr "Requerido. 30 caracteres o menos. Letras, números y @/./+/-/_"
+
+#~ msgid "first name"
+#~ msgstr "nombre propio"
+
+#~ msgid "last name"
+#~ msgstr "apellidos"
+
+#~ msgid "e-mail address"
+#~ msgstr "dirección de correo electrónico"
+
+#~ msgid "password"
+#~ msgstr "contraseña"
+
+#~ msgid "staff status"
+#~ msgstr "es staff"
+
+#~ msgid "Designates whether the user can log into this admin site."
+#~ msgstr "Indica si el usuario puede entrar en este sitio de administración."
+
+#~ msgid "active"
+#~ msgstr "activo"
+
+#~ msgid ""
+#~ "Designates whether this user should be treated as active. Unselect this "
+#~ "instead of deleting accounts."
+#~ msgstr ""
+#~ "Indica si el usuario puede ser tratado como activo. Desmarque esta opción "
+#~ "en lugar de borrar la cuenta."
+
+#~ msgid "superuser status"
+#~ msgstr "es superusuario"
+
+#~ msgid ""
+#~ "Designates that this user has all permissions without explicitly "
+#~ "assigning them."
+#~ msgstr ""
+#~ "Indica que este usuario tiene todos los permisos sin asignárselos "
+#~ "explícitamente."
+
+#~ msgid "last login"
+#~ msgstr "último inicio de sesión"
+
+#~ msgid "date joined"
+#~ msgstr "fecha de alta"
+
+#~ msgid ""
+#~ "The groups this user belongs to. A user will get all permissions granted "
+#~ "to each of his/her group."
+#~ msgstr ""
+#~ "Los grupos a los que este usuario pertenece. Un usuario obtendrá todos "
+#~ "los permisos concedidos a cada uno sus grupos."
+
+#~ msgid "user permissions"
+#~ msgstr "permisos de usuario"
+
+#~ msgid "user"
+#~ msgstr "usuario"
+
+#~ msgid "users"
+#~ msgstr "usuarios"
+
+#~ msgid "Enter a valid e-mail address."
+#~ msgstr "Introduzca una dirección de correo electrónico válida."
