@@ -57,7 +57,8 @@ class Task(models.Model, Daemon):
     def function(self):
         """Returns the function to execute"""
         if self._function is None:
-            self._function = dynamic_import(self.module_name, self.function_name)
+            self._function = dynamic_import(
+                    self.module_name, self.function_name)
         return self._function
 
     @property
@@ -98,7 +99,7 @@ class Task(models.Model, Daemon):
         Runs the task
         - if an expected exception occurs the task y tried later
         - if an unexpected exceptions occurs the task is deleted
-        - if the tasks runs successfuly it is deleted
+        - if the tasks runs successfully it is deleted
         """
         try:
             self.log('Runing')
