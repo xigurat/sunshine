@@ -1,0 +1,89 @@
+{% extends 'sunshine/base.html' %}
+{% load i18n %}
+
+{% block nav_book_upload %}active{% endblock %}
+
+{% block head %}
+    <link href="{{ STATIC_URL }}library/css/library.css" rel="stylesheet" type="text/css" />
+    <script type="text/html" id="book_template">
+        <li class="span9 hide">
+            <div class="row thumbnail">
+                <img src="<%= this.thumbnail_url %>" class="span2" alt="">
+                <div class="span7 caption lateral">
+
+                    <div class="row-fluid show-grid">
+
+                        <div class="span9">
+                            <h5><a href=""><%= this.title %></a></h5>
+                            <p><strong>Authors:</strong> <%= this.authors %></p>
+                            <p><strong>Publication date:</strong> <%= this.date || 'Unknown' %></p>
+                            <p><strong>Uploaded:</strong> <%= this.upload_datetime %></p>
+                            <p><strong>Uploaded by:</strong> <a href="#"><%= this.uploader_username %></a></p>
+                            <p><strong>Pages:</strong> <%= this.n_page || 'Unknown' %></p>
+                            <p><strong>Size:</strong> 12.7 Mb</p>
+                            <p><a href="">Short URL</a></p>
+                        </div>
+                        <div class="span3">
+                            <div class="pull-right btn-group">
+                                <a class="btn btn-mini" href="">
+                                    <i class="icon-download-alt"></i>
+                                </a>
+                                <a class="btn btn-mini read" href="#">
+                                    <i class="icon-book"></i>
+                                </a>
+                                <a class="btn btn-mini edit" href="#">
+                                    <i class="icon-edit"></i>
+                                </a>
+                                <a class="btn btn-mini btn-danger delete" href="#">
+                                    <i class="icon-remove icon-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </script>
+    <script type="text/html" id="book_list_blank_state">
+        <li class="span9 centered blank-state">
+            <h1 class="color-gray-light">There are not books to show</h1>
+        </li>
+    </script>
+{% endblock %}
+
+{% block subscript %}
+    {% include 'ajax_file_uploader/script.html' %}
+    <script type="text/javascript" src="{{ STATIC_URL }}library/models.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}library/upload.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}library/book_list.js"></script>
+{% endblock %}
+
+
+{% block container %}
+<div class="row">
+
+    <div class="span9">
+        <ul class="thumbnails row book-list">
+        </ul>
+    </div>
+
+    <div class="span3">
+        <form class="row form-inline" method="post">
+            <div class="span9 input-append">
+                <input type="text" class="input-medium" placeholder="{% trans 'Username' %}" name="username" />
+                <button class="btn" >
+                    <i class="icon-search"></i>
+                </button>
+            </div>
+        </form>
+
+        <div class="row">
+            <div id="file-uploader" class="span3">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

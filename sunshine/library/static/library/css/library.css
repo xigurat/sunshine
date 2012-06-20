@@ -1,0 +1,13 @@
+.tags { margin-bottom: 10px; }
+.tags .btn { margin-top: 5px; }
+.thumbnail .btn-group {
+    opacity: 0.2;
+    -webkit-transition: opacity 0.2s linear;
+       -moz-transition: opacity 0.2s linear;
+        -ms-transition: opacity 0.2s linear;
+         -o-transition: opacity 0.2s linear;
+            transition: opacity 0.2s linear;
+}
+.thumbnail:hover .btn-group {
+    opacity: 0.8;
+}

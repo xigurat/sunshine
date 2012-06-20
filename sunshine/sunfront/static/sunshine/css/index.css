@@ -1,0 +1,82 @@
+
+.index-search-form {
+    margin-top: 30px ;
+    margin-bottom: 30px;
+}
+
+.index-search-form .search-query {
+    font-size: 1.7em;
+    height: 1.6em;
+    border-radius: 14px 0 0 14px;
+}
+
+.index-search-form [type="submit"] {
+    margin-left: -5px;
+    font-size: 2em;
+    height: 1.7em;
+    border-radius: 0 14px 14px 0;
+}
+
+.typeahead a {
+    font-size: 2em;
+    line-height: 1em;
+}
+
+/*
+Large desktop
+*/
+@media (min-width: 1200px) {
+  .index-search-form {
+    }
+}
+
+
+/*
+Portrait tablet to landscape and desktop
+*/
+@media (min-width: 768px) and (max-width: 980px) {
+    .index-search-form {
+        margin-left: 0;
+    }
+    .index-search-form [type="submit"] {
+       padding-right: 3.5em;
+    }
+}
+
+/*
+Landscape phone to portrait tablet
+*/
+@media (max-width: 768px) {
+    .index-search-form {
+        margin-left: 0;
+    }
+    .index-search-form .search-query {
+        border-radius: 14px;
+        width: 95%;
+    }
+
+    .index-search-form [type="submit"] {
+        width: 100%;
+        margin: 5px;
+
+        border-radius: 14px;
+    }
+}
+
+/*
+Landscape phones and down
+*/
+@media (max-width: 480px) {
+    .index-search-form {
+        margin-left: 0;
+    }
+    .index-search-form .search-query {
+        border-radius: 14px;
+    }
+
+    .index-search-form [type="submit"] {
+        margin-left: 0px;
+        margin-top: 5px;
+        border-radius: 14px;
+    }
+}
