@@ -1,12 +1,38 @@
 *.pyc
 *.pyo
 *.db
-*.dia~
+*~
 *.sublime-project
 *.sublime-workspace
 *.bak
 *.pdf
-thumbnail
-.ropeproject
-documents_index
-sunshine_files
+thumbnail/
+.ropeproject/
+documents_index/
+sunshine_files/
+
+# Packages
+*.egg
+*.egg-info
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+#Translations
+*.mo
+
+#Mr Developer
+.mr.developer.cfg
